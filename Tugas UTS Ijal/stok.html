@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stok / Katalog - Toko Buku Mekar</title>
+  <link rel="stylesheet" href="css/style/main.css" />
+</head>
+<body class="with-sidebar">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top"><div class="logo">Toko Buku Mekar</div></div>
+    <nav class="menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html" class="active">Stok / Katalog</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="dashboard.html#laporan">Laporan Pemesanan</a>
+      <a href="dashboard.html#history">History Transaksi</a>
+      <a href="#" id="profileLink2">Profil</a>
+      <a href="#" id="logoutBtn2">Logout</a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header class="site-header">
+  <div class="logo">Toko Buku Mekar</div>
+  <div class="header-right">
+    <div class="search"><input id="searchBox" placeholder="Cari buku..." /></div>
+    <div class="cart-btn" onclick="ui.toggleCart()">Cart <span id="cartCount">0</span></div>
+    <div class="user" id="userNameDisplay"></div>
+  </div>
+</header>
+
+    <main class="container">
+      <section class="card">
+        <div class="space-between">
+          <h2>Katalog Buku</h2>
+          <div>
+            <button class="btn-secondary" onclick="ui.openAddStock()">Tambah Stok</button>
+            <button class="btn-link" onclick="katalog.renderGrid()">Refresh</button>
+          </div>
+        </div>
+        <div id="katalogGrid" class="grid katalog-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot"></div>
+
+  <script src="js/data/data.js"></script>
+  <script src="js/script/ui.js"></script>
+  <script src="js/script/katalog.js"></script>
+  <script src="js/script/cart.js"></script>
+  <script src="js/script/auth.js"></script>
+</body>
+</html>

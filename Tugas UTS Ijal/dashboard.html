@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Toko Buku Mekar</title>
+  <link rel="stylesheet" href="css/style/main.css" />
+</head>
+<body class="with-sidebar">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top"><div class="logo">Toko Buku Mekar</div></div>
+    <nav class="menu">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="stok.html">Stok / Katalog</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="dashboard.html#laporan">Laporan Pemesanan</a>
+      <a href="dashboard.html#history">History Transaksi</a>
+      <a href="#" id="profileLink">Profil</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header class="site-header">
+  <div class="logo">Toko Buku Mekar</div>
+  <div class="header-right">
+    <div class="search"><input id="searchBox" placeholder="Cari buku..." /></div>
+    <div class="cart-btn" onclick="ui.toggleCart()">Cart <span id="cartCount">0</span></div>
+    <div class="user" id="userNameDisplay"></div>
+  </div>
+</header>
+
+    <main class="container">
+      <section class="hero card">
+        <h2 id="greeting">Selamat Datang</h2>
+        <p id="timeNow" class="muted"></p>
+        <button class="btn-primary" onclick="location.href='stok.html'">Temukan buku impianmu</button>
+      </section>
+
+      <section class="quick-cards">
+        <div class="card small">
+          <h3>Katalog</h3><p>Kelola stok dan lihat koleksi</p><a href="stok.html" class="btn-link">Buka</a>
+        </div>
+        <div class="card small">
+          <h3>Tracking</h3><p>Lacak pengiriman</p><a href="tracking.html" class="btn-link">Buka</a>
+        </div>
+        <div class="card small">
+          <h3>Laporan</h3><p>Ringkasan pesanan</p><a href="#laporan" class="btn-link">Buka</a>
+        </div>
+        <div class="card small">
+          <h3>History</h3><p>Transaksi sebelumnya</p><a href="#history" class="btn-link">Buka</a>
+        </div>
+      </section>
+
+      <section id="laporan" class="card">
+        <h3>Laporan Pemesanan (Sederhana)</h3>
+        <p class="muted">Filter: <input id="lapFilter" placeholder="Nama atau tanggal"/></p>
+        <div id="lapContent">Belum ada data.</div>
+      </section>
+
+      <section id="history" class="card">
+        <h3>History Transaksi</h3>
+        <div id="historyList">Tidak ada transaksi.</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastRoot"></div>
+
+  <script src="js/data/data.js"></script>
+  <script src="js/script/ui.js"></script>
+  <script src="js/script/dashboard.js"></script>
+  <script src="js/script/auth.js"></script>
+</body>
+</html>

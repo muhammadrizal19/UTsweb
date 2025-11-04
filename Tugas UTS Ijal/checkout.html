@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout - Toko Buku Mekar</title>
+  <link rel="stylesheet" href="css/style/main.css" />
+</head>
+<body class="with-sidebar">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top"><div class="logo">Toko Buku Mekar</div></div>
+    <nav class="menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok / Katalog</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="dashboard.html#laporan">Laporan Pemesanan</a>
+      <a href="dashboard.html#history">History Transaksi</a>
+      <a href="#" id="profileLink3">Profil</a>
+      <a href="#" id="logoutBtn3">Logout</a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header class="site-header">
+  <div class="logo">Toko Buku Mekar</div>
+  <div class="header-right">
+    <div class="search"><input id="searchBox" placeholder="Cari buku..." /></div>
+    <div class="cart-btn" onclick="ui.toggleCart()">Cart <span id="cartCount">0</span></div>
+    <div class="user" id="userNameDisplay"></div>
+  </div>
+</header>
+
+    <main class="container checkout-layout">
+      <section class="card">
+        <h2>Informasi Pemesan</h2>
+        <form id="checkoutForm">
+          <label>Nama Lengkap<input id="c_name" required/></label>
+          <label>Email<input id="c_email" type="email" required/></label>
+          <label>Telepon<input id="c_phone" required/></label>
+          <label>Alamat<input id="c_address" required/></label>
+          <h3>Pembayaran</h3>
+          <label><input type="radio" name="pay" value="transfer" checked/> Transfer Bank</label>
+          <label><input type="radio" name="pay" value="cod"/> COD</label>
+          <label><input type="radio" name="pay" value="kartu"/> Kartu</label>
+          <label>Bukti Pembayaran (nomor / referensi) <input id="c_payment_text" /></label>
+          <button type="submit" class="btn-primary">Pesan Sekarang</button>
+        </form>
+      </section>
+
+      <aside class="card cart-summary" id="cartSummary">
+        <h3>Ringkasan Keranjang</h3>
+        <div id="cartItems"></div>
+        <div class="total-line">Total: <span id="cartTotal">0</span></div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="toastRoot"></div>
+
+  <script src="js/data/data.js"></script>
+  <script src="js/script/ui.js"></script>
+  <script src="js/script/cart.js"></script>
+  <script src="js/script/auth.js"></script>
+</body>
+</html>

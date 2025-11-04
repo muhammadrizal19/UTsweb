@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Buku Mekar - Login</title>
+  <link rel="stylesheet" href="css/style/main.css" />
+</head>
+<body>
+  <main class="center-page container">
+    <section class="card login-card">
+      <h1>Selamat Datang di Toko Buku Mekar</h1>
+      <p class="muted">Masuk untuk mulai berbelanja buku (user: user@mekar.com / password)</p>
+      <form id="loginForm">
+        <label>Email<input type="email" id="email" required></label>
+        <label>Password<input type="password" id="password" required></label>
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+      <div class="login-links">
+        <a href="#" id="forgotLink">Lupa Password</a> |
+        <a href="#" id="registerLink">Daftar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modalRoot"></div>
+
+  <script src="js/data/data.js"></script>
+  <script src="js/script/ui.js"></script>
+  <script src="js/script/auth.js"></script>
+</body>
+</html>

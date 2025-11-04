@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tracking - Toko Buku Mekar</title>
+  <link rel="stylesheet" href="css/style/main.css" />
+</head>
+<body class="with-sidebar">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top"><div class="logo">Toko Buku Mekar</div></div>
+    <nav class="menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="stok.html">Stok / Katalog</a>
+      <a href="tracking.html" class="active">Tracking</a>
+      <a href="dashboard.html#laporan">Laporan Pemesanan</a>
+      <a href="dashboard.html#history">History Transaksi</a>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <header class="site-header">
+  <div class="logo">Toko Buku Mekar</div>
+  <div class="header-right">
+    <div class="search"><input id="searchBox" placeholder="Cari buku..." /></div>
+    <div class="cart-btn" onclick="ui.toggleCart()">Cart <span id="cartCount">0</span></div>
+    <div class="user" id="userNameDisplay"></div>
+  </div>
+</header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Tracking Pengiriman</h2>
+        <div class="inline">
+          <input id="doInput" placeholder="Masukkan Nomor DO" />
+          <button class="btn-primary" id="doSearch">Cari</button>
+        </div>
+        <div id="trackingResult"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastRoot"></div>
+
+  <script src="js/data/data.js"></script>
+  <script src="js/script/ui.js"></script>
+  <script src="js/script/tracking.js"></script>
+  <script src="js/script/auth.js"></script>
+</body>
+</html>
